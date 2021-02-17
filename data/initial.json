@@ -1,0 +1,63 @@
+{
+  "graph": [
+    {
+      "title": "GIVEN LV",
+      "monthTrend": 0,
+      "monthSum": 0,
+      "dayTrend": 0,
+      "daySum": 0
+    },
+    {
+      "title": "GIVEN EE",
+      "monthTrend": 0,
+      "monthSum": 0,
+      "dayTrend": 0,
+      "daySum": 0
+    },
+    {
+      "title": "GRENARDI LV",
+      "monthTrend": 0,
+      "monthSum": 0,
+      "dayTrend": 0,
+      "daySum": 0
+    },
+    {
+      "title": "GRENARDI EE",
+      "monthTrend": 0,
+      "monthSum": 0,
+      "dayTrend": 0,
+      "daySum": 0
+    }
+  ],
+  "deals": [
+    {
+      "code": "Loading...",
+      "time": "00:00",
+      "sum": 0.0,
+      "shop": "-"
+    },
+    {
+      "code": "Loading...",
+      "time": "00:00",
+      "sum": 0.0,
+      "shop": "-"
+    },
+    {
+      "code": "Loading...",
+      "time": "00:00",
+      "sum": 0.0,
+      "shop": "-"
+    },
+    {
+      "code": "Loading...",
+      "time": "00:00",
+      "sum": 0.0,
+      "shop": "-"
+    },    {
+      "code": "Loading...",
+      "time": "00:00",
+      "sum": 0.0,
+      "shop": "-"
+    }
+  ]
+}
