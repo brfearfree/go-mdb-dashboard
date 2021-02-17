@@ -17,7 +17,7 @@ func serveHome(w http.ResponseWriter, r *http.Request) {
 }
 
 func catchData(hub *Hub, w http.ResponseWriter, r *http.Request) {
-	log.Println("Data:", r.URL)
+	//log.Println("Data:", r.URL)
 
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
@@ -30,7 +30,7 @@ func catchData(hub *Hub, w http.ResponseWriter, r *http.Request) {
 
 }
 func catchUpdate(hub *Hub, w http.ResponseWriter, r *http.Request) {
-	log.Println("Update:" , r.URL)
+	//log.Println("Update:" , r.URL)
 
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
@@ -38,6 +38,7 @@ func catchUpdate(hub *Hub, w http.ResponseWriter, r *http.Request) {
 	}
 	hub.cached = body
 	hub.broadcast <- []byte(body)
+
 	http.ServeFile(w, r, "data/thanks.json")
 }
 
