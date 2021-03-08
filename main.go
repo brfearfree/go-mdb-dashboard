@@ -36,7 +36,10 @@ func catchUpdate(hub *Hub, w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal("r.Body read: ", err)
 	}
+	hub.mu.Lock()
 	hub.cached = body
+	hub.mu.Unlock()
+
 	hub.broadcast <- []byte(body)
 
 	http.ServeFile(w, r, "data/thanks.json")
@@ -48,7 +51,10 @@ func runSocks(){
 	hub := newHub()
 
 	dat,_ := ioutil.ReadFile("data/initial.json")
+
+	hub.mu.Lock()
 	hub.cached = dat
+	hub.mu.Unlock()
 
 	go hub.run()
 

@@ -1,5 +1,7 @@
 package main
 
+import "sync"
+
 // Hub maintains the set of active clients and broadcasts messages to the
 // clients.
 type Hub struct {
@@ -17,6 +19,9 @@ type Hub struct {
 
 	// last cached data
 	cached []byte
+
+	// cache lock
+	mu sync.Mutex
 }
 
 func newHub() *Hub {
